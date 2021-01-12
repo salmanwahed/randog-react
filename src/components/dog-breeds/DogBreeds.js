@@ -14,7 +14,7 @@ const DogBreeds = () => {
         "https://dog.ceo/api/breeds/list/all"
       );
       if (status >= 200 && status < 300) {
-        const { message, status } = data;
+        const { message } = data;
         const breedsName = Object.keys(message);
         setBreeds(breedsName);
       }
@@ -33,7 +33,7 @@ const DogBreeds = () => {
     }
     const { data, status } = await axios.get(url);
     if(status >= 200 && status < 300){
-      const {message, state} = data;
+      const {message} = data;
       setBreedImages(message);
     }
     
